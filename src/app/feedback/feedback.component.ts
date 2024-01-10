@@ -44,7 +44,10 @@ override: true
    const modal = new Modal(this.modal.nativeElement, this.modalOptions, this.modalInstanceOptions);
    modal.show();
 
-   this.feedbackService.sendFeedback({name, feedbackType, feedback});
+   this.feedbackService.sendFeedback({
+     name, feedbackType, feedback,
+     contactEmailAddress: ''
+   });
   }
 
   hideModal() {
